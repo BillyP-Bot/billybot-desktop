@@ -1,11 +1,11 @@
 {
   "name": "billybot-desktop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal Electron application",
   "main": "index.js",
   "scripts": {
     "rebuild": ".\\node_modules\\.bin\\electron-rebuild",
-    "distribute": "npm run lint && electron-packager . --overwrite --prune=true --asar --out=release-builds",
+    "build": "npm run lint && electron-packager . --overwrite --prune=true --asar --out=release-builds",
     "distribute:all": "npm run lint && electron-packager . --overwrite --prune=true --asar --out=release-builds --all",
     "lint": "eslint --fix --ext .js,.jsx .",
     "start": "set NODE_ENV=local && electron ."

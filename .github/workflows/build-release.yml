@@ -24,6 +24,8 @@ jobs:
           node-version: 16.x
           cache: yarn
 
+      - run: yarn install --frozen-lockfile
+
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
         with:
