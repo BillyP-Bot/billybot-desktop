@@ -1,0 +1,30 @@
+{
+  "name": "billybot-desktop",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "index.js",
+  "scripts": {
+    "rebuild": ".\\node_modules\\.bin\\electron-rebuild",
+    "distribute": "npm run lint && electron-packager . --overwrite --prune=true --asar --out=release-builds",
+    "distribute:all": "npm run lint && electron-packager . --overwrite --prune=true --asar --out=release-builds --all",
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "start": "set NODE_ENV=local && electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^19.0.1",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "electron-packager": "^15.5.1",
+    "electron-rebuild": "^3.2.7"
+  }
+}
